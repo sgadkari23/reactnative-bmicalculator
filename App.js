@@ -4,6 +4,7 @@
  *
  * @format
  * @flow strict-local
+ * Author: Supruya Gadkari
  */
 
 import React, { Component } from 'react';
@@ -29,7 +30,9 @@ import {
     List, 
     ListItem } from 'native-base';
 
+// React native class based component to store state
 class App extends Component {
+
     state = {
         heightcm: '',
         heightft: '',
@@ -40,14 +43,17 @@ class App extends Component {
         errorMessage: ''
     };
 
+    // Handle radio mode button selection of metric mode
     handleModeMetric = () => {
         this.setState({ metricMode: true, heightcm: '', heightft: '', heightin: '', weight: '', bmi: 0 });
     }
 
+    // Handle radio mode button selection of imperial/standard mode
     handleModeImperial = () => {
         this.setState({ metricMode: false, heightcm: '', heightft: '', heightin: '', weight: '', bmi: 0 });
     }
 
+    // Handle submit button click to calculate BMI
     handleSubmit = () => {
         // Check if any input is not a number
         if (isNaN(this.state.heightcm) || isNaN(this.state.heightft) || isNaN(this.state.heightin) || isNaN(this.state.weight))
@@ -148,6 +154,7 @@ class App extends Component {
     };
 }
 
+// Component level styling
 const Styles = StyleSheet.create({
     parentContainer: {
         padding: 10
