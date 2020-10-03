@@ -4,7 +4,7 @@
  *
  * @format
  * @flow strict-local
- * Author: Supruya Gadkari
+ * Author: Supriya Gadkari
  */
 
 import React, { Component } from 'react';
